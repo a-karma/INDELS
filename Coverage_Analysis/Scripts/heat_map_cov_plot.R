@@ -1,4 +1,5 @@
-setwd("INDELS/Coverage_Analysis/Scripts/")
+# May need to modify this accordingly to your filesystem
+# setwd("INDELS/Coverage_Analysis/Scripts/")
 
 All_region_df<-"../Output/edited_coverage_database.csv"
 
