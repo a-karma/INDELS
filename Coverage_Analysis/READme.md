@@ -7,7 +7,7 @@ In order to create Can_Fam_bedtools_genome_file.txt we can make use of the heade
 #### Commands
 samtools view -H <any_input_file.bam> | grep '@SQ' | awk 'BEGIN {OFS="\t"};{print $2,$3}' | sed 's/SN://' | sed 's/LN://' > ./Input/Can_Fam_bedtools_genome_file.txt
 
-bedtools coverage -a ./Input/chr6_target.bed -b input.bam -hist -sorted -g ./Input/Can_Fam_bedtools_genome_file.txt > ./Input/raw/input.cov.tsv
+bedtools coverage -a ./Input/chr6_target.bed -b input.bam -hist -sorted -g ./Input/Can_Fam_bedtools_genome_file.txt > ./Input/raw/input_cov.tsv
 
 ## Aggregating Tables
 Once all tables have been produced, it is possible to aggregate them into a single dataframe using the custom python script provided (extract_aggregate.py). The dataframe was then edited manually to add the status column (wild vs domestic). 
