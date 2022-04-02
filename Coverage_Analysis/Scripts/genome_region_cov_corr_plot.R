@@ -11,7 +11,7 @@ y_label="Mean region Depth of Coverage"
 
 col<-c("#1A80C4","#CC3D3D")
 
-pdf(paste("../Plots/",levels(tab$Region),"_",levels(as.factor(tab$Length)),"_bp_corr_plot.pdf", sep="", collapse=NULL))
+pdf(paste("Plots/",levels(tab$Region),"_",levels(as.factor(tab$Length)),"_bp_corr_plot.pdf", sep="", collapse=NULL))
 print(
 ggplot(dat,aes(G_doc,R_doc))+
   geom_point(aes(colour = Type), size=3, alpha=0.7) +
