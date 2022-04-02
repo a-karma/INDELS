@@ -1,7 +1,7 @@
 # May need to modify this accordingly to your filesystem
 # setwd("INDELS/Coverage_Analysis/Scripts/")
 
-All_region_df<-"../Output/edited_coverage_database.csv"
+All_region_df<-"./Output/edited_coverage_database.csv"
 
 library(ggplot2)
 library(reshape)
@@ -20,7 +20,7 @@ if ( dat1$Mean_Coverage[i] > 20 ){
   dat1$Mean_Coverage[i]=20
 }}
 
-pdf(paste("../Plots/heat_map_mean_doc.pdf", sep="", collapse=NULL), width=7, height=21, pointsize=10)
+pdf(paste("./Plots/heat_map_mean_doc.pdf", sep="", collapse=NULL), width=7, height=21, pointsize=10)
 print(
   ggplot(dat1, aes(x = Region, y = ID, fill = Mean_Coverage)) +
         geom_tile() +
@@ -35,7 +35,7 @@ dev.off()
 dat2<-data.frame(tab$Sample_ID,tab$Region,tab$BoC)
 names(dat2)<-c("ID","Region","Breadth")
 
-pdf(paste("../Plots/heat_map_boc.pdf", sep="", collapse=NULL), width=7, height=21, pointsize=10)
+pdf(paste("./Plots/heat_map_boc.pdf", sep="", collapse=NULL), width=7, height=21, pointsize=10)
 print(
   ggplot(dat2, aes(x = Region, y = ID, fill =Breadth)) +
     geom_tile() +
