@@ -22,3 +22,6 @@ The script generates an heat map which shows a per region summary of the breadth
 The dataframe is then split by region (see example below) and each file is then processed in R. 
 The correlation between the region coverage and the genome-wide mean depth is visualised using master script (genome_region_cov_corr_master.R). This is in fact a wrapper for the plotting script (genome_region_cov_corr_plot.R).
 #### Commands
+cat Output/edited_coverage_database.csv | grep 'R1' > Output/region_1_table.csv
+
+Rscript ./Scripts/genome_region_cov_corr_master.R
