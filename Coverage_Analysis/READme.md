@@ -10,3 +10,13 @@ samtools view -H <any_input_file.bam> | grep '@SQ' | awk 'BEGIN {OFS="\t"};{prin
 bedtools coverage -a ./Input/chr6_target.bed -b input.bam -hist -sorted -g ./Input/Can_Fam_bedtools_genome_file.txt > ./Input/raw/input.cov.tsv
 
 # Aggregating Tables
+Once all tables have been produced, it is possible to aggregate them into a single dataframe using the custom python script provided (extract_aggregate.py). The dataframe was then edited manually to add the status column (wild vs domestic). 
+### Commands
+ls Input/raw/*.tsv > Input/tables_list.tsv
+
+python3.8 ./scripts/extract_aggregate.py ../chr6_target.bed table_list.txt
+
+# Analysis
+This edited dataframe serves as input for the heatmap which shows a per region summary of the breadth of coverage (BoC) and the coverage depth (DoC) for each sample. 
+
+The dataframe is then split by region and each file is then processed using the R script provided (
