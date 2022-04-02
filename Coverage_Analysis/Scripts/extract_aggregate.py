@@ -8,7 +8,7 @@ import sys
 
 region_file=sys.argv[1]
 file_handle=sys.argv[2]
-outfile="coverage_dataframe.tsv"
+outfile="./Output/coverage_dataframe.tsv"
 
 with open(region_file) as l:
 	r=l.readlines()
