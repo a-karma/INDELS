@@ -17,6 +17,6 @@ ls ./Input/raw/*.tsv > ./Input/tables_list.tsv
 python3.8 ./Scripts/extract_aggregate.py ./Input/chr6_target.bed ./Input/table_list.txt
 
 # Analysis
-This edited dataframe serves as input for the heatmap which shows a per region summary of the breadth of coverage (BoC) and the coverage depth (DoC) for each sample. 
+This edited dataframe (edited_coverage_database.csv) serves as input for the heatmap which shows a per region summary of the breadth of coverage (BoC) and the coverage depth (DoC) for each sample. 
 
 The dataframe is then split by region and each file is then processed using the R script provided (
