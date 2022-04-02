@@ -18,7 +18,7 @@ python3.8 ./Scripts/extract_aggregate.py ./Input/chr6_target.bed ./Input/table_l
 
 ## Analysis
 This edited dataframe (edited_coverage_database.csv) serves as input for the custom R script provided (heat_map_cov_plot.R). 
-The script generates an heat map which shows a per region summary of the breadth of coverage (BoC) and the coverage depth (DoC) for each sample. 
+The script generates an heat mapshowing per region summaries of the breadth of coverage (BoC) and the coverage depth (DoC) for each sample. 
 The dataframe is then split by region (see example below) and each file is then processed in R. 
 The correlation between the region coverage and the genome-wide mean depth is visualised using master script (genome_region_cov_corr_master.R). This is in fact a wrapper for the plotting script (genome_region_cov_corr_plot.R).
 #### Commands
