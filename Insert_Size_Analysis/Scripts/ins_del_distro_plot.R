@@ -328,7 +328,7 @@ p3b <- ggplot() +
 
 #==================================== Plots ========================================================
 
-pdf("Hierarchical_Clustering_plots_MaxMiss50.pdf", width=15, height=17)
+pdf("Plots/Hierarchical_Clustering_plots_MaxMiss50.pdf", width=15, height=17)
 print(p0a)
 print(p0b)
 print(p1a)
@@ -459,7 +459,7 @@ P_25d <- ggplot() +
 
 
 # Plots =====================================================================================================================
-pdf("Hierarchical_Clustering_plots_MaxMiss25.pdf", width=15, height=17)
+pdf("Plots/Hierarchical_Clustering_plots_MaxMiss25.pdf", width=15, height=17)
 print(P_25a)
 print(P_25b)
 print(P_25c)
@@ -655,7 +655,7 @@ PCA_ml10_mm25_tails<-fviz_pca_ind(pca_dat, col.ind=dat$Status, label = "none",  
                                   pointshape = 21,fill.ind = dat$Status, alpha.ind = 0.7, legend.title="Categories") + 
   ggtitle("PCA: min_Indel_size >10bp, missing_data<25%, tails only")
 fviz_pca_var(pca_dat)
-pdf("PCA_plots.pdf")
+pdf("Plots/PCA_plots.pdf")
 print(PCA_ml1_mm50_all)
 print(PCA_ml1_mm50_tails)
 print(PCA_ml1_mm25_all)
