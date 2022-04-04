@@ -1,6 +1,6 @@
 ## Adding Samples
 
-There are a few steps necessary to add a sample to the vcf. The script preprocess_bam_to_vcf.sh contains a few commands that might need further testing and modifications but should represent a good starting point.
+There are a few steps necessary to add a sample to the vcf. The script __preprocess_bam_to_vcf.sh__ contains a few commands that might need further testing and modifications but should represent a good starting point.
 
 ## Pre-processig
 
