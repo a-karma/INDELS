@@ -81,7 +81,7 @@ for individual in indiv_list:
 	net_len=sum(insertion_dict.get(individual)+deletion_dict.get(individual))
 	event_dict[individual]=[str(value) for value in event_dict.get(individual)+[mean_ins,sd_ins,mean_del,sd_del,net_len]]
 
-outname="Indels_summary_minSize_"+str(min_indel_size)+".tsv"
+outname="Output/Indels_summary_minSize_"+str(min_indel_size)+".tsv"
 
 with open(outname, 'w') as osf:
 	for val in event_dict.keys():
