@@ -17,14 +17,20 @@ This script requires three input arguments: the subsetted vcf file (chr6_target_
 The output of the script is a headerless tab separated file. Each row represents a single individual and consists of the following fields: 
 - Sample ID
 - Number of Missing data
+- Number of times the REF allele was observed
+- Number of Discarded indels due to size filtering
 - Number of Insertion events
 - Number of Deletion events
-- mean length of Insertion
+- mean length of Insertion in bp
 - Standard Deviation of Insertion size
-- mean length of Deletion
+- mean length of Deletion in bp
 - Standard Deviation of Deletion size
-- Total net length 
+- Total net length in bp (Deletions from REF are counted as negative, Insertions are considered positive)
+
+These output files need to be manually curated to add a stutus column (wild vs domestics) or a functional category for the breed
 
 #### Example Command
+
+> python3 Scripts/ins_del_summary.py Input/chr6_target_indels.vcf Input/ind_names.txt 5
 
 ## Plotting Results
