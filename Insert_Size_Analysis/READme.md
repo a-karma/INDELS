@@ -10,9 +10,9 @@ Firstly we need to extract from the big vcf the information about indels within 
 > bcftools view -v indels -R chr6_extended_target_list.bed -Ov -o Input/chr6_target_indels.vcf path/to/big/vcf/from/NIH
 
 ## Creating Summaries
-Summary statistics can be obtained employing the custom python script (ins_del_summary.py).
+Summary statistics can be obtained employing the custom python script (__ins_del_summary.py__).
 
-This script requires three input arguments: the subsetted vcf file (chr6_target_indels.vcf), a file with individual names one per line in the same order as they appear in the vcf, an integer representing the minimum size of indels to be included in the analysis. Arguments must be provided at the call in this order. 
+This script requires three input arguments: the subsetted vcf file (__chr6_target_indels.vcf__), a file with individual names one per line in the same order as they appear in the vcf, an integer representing the minimum size of indels to be included in the analysis. Arguments must be provided at the call in this order. 
 
 The output of the script is a headerless tab separated file. Each row represents a single individual and consists of the following fields: 
 - Sample ID
@@ -27,7 +27,7 @@ The output of the script is a headerless tab separated file. Each row represents
 - Standard Deviation of Deletion size
 - Total net length in bp (Deletions from REF are counted as negative, Insertions are considered positive)
 
-Each .tsv output file will be termed Indels_summary_min followed by the value provided as the third argument. These files need to be manually curated to add a stutus column (wild vs domestics) or a functional category for the breed. Examples of these curetad versions are provided in the Output folder (see for example final_summary_min5.tsv)
+Each .tsv output file will be termed __Indels_summary_min__ followed by the value provided as the third argument. These files need to be manually curated to add a stutus column (wild vs domestics) or a functional category for the breed. Examples of these curetad versions are provided in the Output folder (see for example __final_summary_min5.tsv__)
 
 #### Example Command
 
