@@ -4,7 +4,7 @@ There are a few steps necessary to add a sample to the vcf. The script preproces
 
 ## Pre-processig
 
-Firstly we need to extract the information about indels in the regions of interests from the big vcf. This can be done using for example bcftools but any other software that deals with this format will do. Here I have used an extended region file (spanning 1kb per region) which is provided in the Input folder.
+Firstly we need to extract from the big vcf the information about indels within the regions of interest. This can be done using for example bcftools but any other software that deals with this format will do. Here I have used an extended region file (spanning 1kb per region) which is provided in the Input folder.
 
 #### Command
 bcftools view -v indels -R chr6_extended_target_list.bed -Ov -o Input/chr6_target_indels.vcf path/to/big/vcf/from/NIH
