@@ -6,8 +6,9 @@ library(caret)
 library(factoextra)
 
 # Importing dataframe
-setwd("~/Desktop/Willis_Synd/Insert_Size")
-full_data<-read.table("final_summary.tsv", header=F, col.names=c(
+# need to modify this according to the local filesystem
+# setwd("Insert_Size")
+full_data<-read.table("Output/final_summary.tsv", header=F, col.names=c(
   "ID","Missing", "Ins_events","Del_events","mean_len_Ins","sd_len_Ins","mean_len_Del","sd_len_Del","total_net_len","Status"))
 
 
@@ -341,7 +342,7 @@ dev.off()
 ##################################################### Clustering MaxMiss 25% #########################################################
 
 # Min Indel size 5 bp =============================================================================================================
-full_data<-read.table("final_summary_min5.tsv", header=F, col.names=c(
+full_data<-read.table("Output/final_summary_min5.tsv", header=F, col.names=c(
   "ID","Missing","Ref_Alleles", "Discarded","Ins_events","Del_events","mean_len_Ins",
   "sd_len_Ins","mean_len_Del","sd_len_Del","total_net_len","Status"))
 
@@ -400,7 +401,7 @@ P_25b <- ggplot() +
   ggtitle("Indels Dendrogram: Min Indel size 5 bp, MaxMiss 25%, Normalised var=(net, mean, sd), tails only")
 
 # Min Indel Size 10 bp ==========================================================================================================
-full_data<-read.table("final_summary_min10.tsv", header=F, col.names=c(
+full_data<-read.table("Output/final_summary_min10.tsv", header=F, col.names=c(
   "ID","Missing","Ref_Alleles", "Discarded","Ins_events","Del_events","mean_len_Ins",
   "sd_len_Ins","mean_len_Del","sd_len_Del","total_net_len","Status"))
 
@@ -467,10 +468,10 @@ dev.off()
 
 ################################################################ PCA plots #############################################################
 
-setwd("~/Desktop/Willis_Synd/Insert_Size")
+# setwd("Insert_Size")
 
 # Min Indel size ====================================================================================================================
-full_data<-read.table("final_summary_min1.tsv", header=F, col.names=c(
+full_data<-read.table("Output/final_summary_min1.tsv", header=F, col.names=c(
   "ID","Missing","Ref_Alleles", "Discarded","Ins_events","Del_events",
   "mean_len_Ins","sd_len_Ins","mean_len_Del","sd_len_Del","total_net_len","Status"))
 
@@ -516,7 +517,7 @@ PCA_ml1_mm25_tails<-fviz_pca_ind(pca_dat, col.ind = dat$Status, label = "none", 
 
 # Min Indel size 2bp ==================================================================================================================
 
-full_data<-read.table("final_summary_min2.tsv", header=F, col.names=c(
+full_data<-read.table("Output/final_summary_min2.tsv", header=F, col.names=c(
   "ID","Missing","Ref_Alleles", "Discarded","Ins_events","Del_events","mean_len_Ins",
   "sd_len_Ins","mean_len_Del","sd_len_Del","total_net_len","Status"))
 
@@ -562,7 +563,7 @@ PCA_ml2_mm25_tails<-fviz_pca_ind(pca_dat, col.ind=dat$Status, label = "none",  m
   ggtitle("PCA: min_Indel_size >2bp, missing_data<25%, tails only") 
 # Min Indel size 5bp ==================================================================================================================
 
-full_data<-read.table("final_summary_min5.tsv", header=F, col.names=c(
+full_data<-read.table("Output/final_summary_min5.tsv", header=F, col.names=c(
   "ID","Missing","Ref_Alleles", "Discarded","Ins_events","Del_events","mean_len_Ins",
   "sd_len_Ins","mean_len_Del","sd_len_Del","total_net_len","Status"))
 
@@ -609,7 +610,7 @@ PCA_ml5_mm25_tails<-fviz_pca_ind(pca_dat, col.ind=dat$Status, label = "none",  m
 
 # Min Indel size 10bp ================================================================================================================
 
-full_data<-read.table("final_summary_min10.tsv", header=F, col.names=c(
+full_data<-read.table("Output/final_summary_min10.tsv", header=F, col.names=c(
   "ID","Missing","Ref_Alleles", "Discarded","Ins_events","Del_events","mean_len_Ins",
   "sd_len_Ins","mean_len_Del","sd_len_Del","total_net_len","Status"))
 
