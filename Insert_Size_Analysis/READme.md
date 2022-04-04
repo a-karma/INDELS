@@ -27,7 +27,7 @@ The output of the script is a headerless tab separated file. Each row represents
 - Standard Deviation of Deletion size
 - Total net length in bp (Deletions from REF are counted as negative, Insertions are considered positive)
 
-These output files need to be manually curated to add a stutus column (wild vs domestics) or a functional category for the breed
+Each .tsv output file will be termed Indels_summary_min followed by the value provided as the third argument. These files need to be manually curated to add a stutus column (wild vs domestics) or a functional category for the breed. Examples of these curetad versions are provided in the Output folder (see for example final_summary_min5.tsv)
 
 #### Example Command
 
