@@ -36,4 +36,6 @@ Each .tsv output file will be termed __Indels_summary_min__ followed by the valu
 ## Plotting Results
 Results can be visualised using the R script __ins_del_distro_plot.R__
 
-The script inspects the distributions of total net length of wild and domestics and performs clustering and PCA analysis based on the summary statistics genereted with the procedure described above. Changes to the __setwd__ command might be needed to run the script on a local machine.
+The script inspects the distributions of total net length of wild and domestics and performs clustering and PCA analysis based on the summary statistics genereted with the procedure described above. 
+
+Changes to the __setwd__ command might be needed to run the script on a local machine.
