@@ -10,7 +10,7 @@ Firstly we need to extract from the big vcf the information about indels within 
 > bcftools view -v indels -R chr6_extended_target_list.bed -Ov -o Input/chr6_target_indels.vcf path/to/big/vcf/from/NIH
 
 ## Creating Summaries
-Summary statistics can be obtained employing the custom python script (__ins_del_summary.py__).
+Summary statistics can be obtained running the custom python script __ins_del_summary.py__.
 
 This script requires three input arguments: the subsetted vcf file (__chr6_target_indels.vcf__), a file with individual names one per line in the same order as they appear in the vcf, an integer representing the minimum size of indels to be included in the analysis. Arguments must be provided at the call in this order. 
 
